@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://qsm45g8bhdfp"]
+
+[ext_resource type="Shader" uid="uid://21tn0va8dyib" path="res://shaders/p5square.gdshader" id="1_vf54b"]
+
+[resource]
+shader = ExtResource("1_vf54b")
+shader_parameter/t = 0.5
+shader_parameter/mask_color = Color(0, 0, 0.5, 1)
+shader_parameter/background_color = Color(0, 0, 0, 0)
+shader_parameter/translate = Vector2(-0.25, -0.25)
+shader_parameter/extra_size = 1.0

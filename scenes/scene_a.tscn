@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://cisbag60sgu0w"]
+
+[ext_resource type="Script" uid="uid://cdklskppdsu5v" path="res://scripts/scene_a.gd" id="1_qdnqf"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_0dyhm"]
+radius = 0.4
+height = 0.8
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u8mlw"]
+sky_top_color = Color(0.75, 0.388625, 0.3075, 1)
+sky_horizon_color = Color(0.74, 0.6854867, 0.48839998, 1)
+ground_bottom_color = Color(0.21460001, 0.21460001, 0.37, 1)
+ground_horizon_color = Color(0.77628314, 0.63551795, 0.2955092, 1)
+
+[sub_resource type="Sky" id="Sky_shhxl"]
+sky_material = SubResource("ProceduralSkyMaterial_u8mlw")
+
+[sub_resource type="Environment" id="Environment_2iboh"]
+background_mode = 2
+sky = SubResource("Sky_shhxl")
+
+[node name="Node3D" type="Node3D" unique_id=1439752840]
+script = ExtResource("1_qdnqf")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=904712626]
+mesh = SubResource("SphereMesh_0dyhm")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1360367636]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.4631045)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=836702299]
+environment = SubResource("Environment_2iboh")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1571704454]
+transform = Transform3D(-0.808911, 0.144941, 0.56978506, 0.37091556, 0.87774104, 0.30330208, -0.4561628, 0.4566866, -0.7637754, 0, 0, 0)
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1588994950]
+
+[node name="BtnLoad" type="Button" parent="UI" unique_id=326421168]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.0
+offset_top = -15.5
+offset_right = 93.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "LOAD SCENE B"
+
+[connection signal="pressed" from="UI/BtnLoad" to="." method="_on_btn_load_pressed"]

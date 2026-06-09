@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://bbkl4fhccurke"]
+
+[ext_resource type="Script" uid="uid://bj5b3hhgj5hgb" path="res://scripts/scene_b.gd" id="1_uo2a0"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_g2muj"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u8mlw"]
+
+[sub_resource type="Sky" id="Sky_shhxl"]
+sky_material = SubResource("ProceduralSkyMaterial_u8mlw")
+
+[sub_resource type="Environment" id="Environment_2iboh"]
+background_mode = 2
+sky = SubResource("Sky_shhxl")
+
+[node name="Node3D" type="Node3D" unique_id=1439752840]
+script = ExtResource("1_uo2a0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=904712626]
+transform = Transform3D(0.70710677, 0.49999997, 0.49999997, 0, 0.70710677, -0.70710677, -0.70710677, 0.49999997, 0.49999997, 0, 0, 0)
+mesh = SubResource("BoxMesh_g2muj")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1360367636]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.4631045)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=836702299]
+environment = SubResource("Environment_2iboh")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1571704454]
+transform = Transform3D(0.80942684, -0.17904714, -0.55925864, 0.0104814, -0.94782555, 0.31861702, -0.5871271, -0.26375896, -0.7653188, 0, 0, 0)
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1247771681]
+
+[node name="BtnLoad" type="Button" parent="UI" unique_id=734022166]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.0
+offset_top = -15.5
+offset_right = 93.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "LOAD SCENE A"
+
+[connection signal="pressed" from="UI/BtnLoad" to="." method="_on_btn_load_pressed"]
