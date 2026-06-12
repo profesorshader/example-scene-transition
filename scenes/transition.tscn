@@ -210,7 +210,7 @@ mouse_filter = 2
 layout_mode = 2
 offset_transform_enabled = true
 theme_override_font_sizes/font_size = 96
-text = "NEXT"
+text = "¡SUSCRIBETE"
 horizontal_alignment = 1
 
 [node name="LblLevel" type="Label" parent="CanvasLayer/TextContainer/VBoxContainer" unique_id=2112482542]
@@ -218,7 +218,7 @@ layout_mode = 2
 offset_transform_enabled = true
 offset_transform_position_ratio = Vector2(1, 0)
 theme_override_font_sizes/font_size = 96
-text = "SCENE"
+text = "A MI CANAL!"
 horizontal_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/TextContainer" unique_id=253673647]
