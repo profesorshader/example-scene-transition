@@ -13,7 +13,7 @@ config_version=5
 config/name="Scene Transition Example"
 run/main_scene="uid://cisbag60sgu0w"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://cjn2qiprhg0hx"
 
 [autoload]
 
